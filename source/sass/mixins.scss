@@ -5,8 +5,10 @@
 }
 
 @mixin hover {
-  &:hover:not([disabled]) {
-    @content;
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
   }
 }
 

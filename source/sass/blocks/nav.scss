@@ -52,11 +52,14 @@
   font-size: 16px;
   padding: 5px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    transition: background-color $trans-default;
+  }
+
   @include hover {
     &::before {
-      content: "";
-      position: absolute;
-      transition: background-color $trans-default;
       bottom: 1px;
       left: 0;
       width: 100%;
@@ -89,17 +92,20 @@
 
 .is-open .nav__link {
   @include vp-1199 {
+    &::before {
+      content: "";
+      position: absolute;
+      transition: background-color $trans-default;
+      bottom: -2px;
+    }
+
     @include focus {
       outline: 1px solid $color-elephant;
     }
 
     @include hover {
       &::before {
-        content: "";
-        position: absolute;
-        transition: background-color $trans-default;
         background-color: $color-elephant;
-        bottom: -2px;
       }
     }
 
