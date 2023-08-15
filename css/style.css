@@ -1299,10 +1299,6 @@ button,
   transition: background-color 0.3s ease;
 }
 
-.nav__link:active:not([disabled])::before {
-  background-color: rgba(255, 255, 255, 0);
-}
-
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1413,15 +1409,15 @@ button,
   .is-open .nav__link.focus-visible:focus {
     outline: 1px solid #2d383f;
   }
-
-  .is-open .nav__link:active:not([disabled])::before {
-    background-color: rgba(255, 255, 255, 0);
-  }
 }
 
 @media (max-width: 1199px) and (hover: hover) {
-  .is-open .nav__link:hover:not(.focus-visible)::before {
+  .is-open .nav__link:hover::before {
     background-color: #2d383f;
+  }
+
+  .is-open .nav__link:active::before {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -1560,11 +1556,15 @@ button,
     background-color: rgba(0, 0, 0, 0.4);
   }
 
-  .nav__link:hover:not(.focus-visible)::before {
+  .nav__link:hover::before {
     bottom: 1px;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: #ffffff;
+  }
+
+  .nav__link:active::before {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
