@@ -65,8 +65,10 @@
     }
   }
 
-  &:active:not([disabled])::before {
-    background-color: transparent;
+  @include active {
+    &::before {
+      background-color: $color-transparent;
+    }
   }
 
   @include vp-1199 {
@@ -97,10 +99,14 @@
       }
     }
 
-    &:active:not([disabled])::before {
-      background-color: transparent;
+    @include active {
+      &::before {
+        background-color: $color-transparent;
+      }
     }
   }
+
+
 
   @include focus {
     outline: 1px solid $color-elephant;
