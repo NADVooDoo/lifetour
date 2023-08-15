@@ -89,6 +89,10 @@
 
 .is-open .nav__link {
   @include vp-1199 {
+    @include focus {
+      outline: 1px solid $color-elephant;
+    }
+
     @include hover {
       &::before {
         content: "";
@@ -104,11 +108,5 @@
         background-color: $color-transparent;
       }
     }
-  }
-
-
-
-  @include focus {
-    outline: 1px solid $color-elephant;
   }
 }
