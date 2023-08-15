@@ -6,8 +6,8 @@
 
 @mixin hover {
   @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
+  &:hover {
+    @content;
     }
   }
 }
@@ -19,8 +19,10 @@
 }
 
 @mixin active {
-  &:active:not([disabled]) {
-    @content;
+  @media (hover: hover) {
+    &:active {
+      @content;
+    }
   }
 }
 
