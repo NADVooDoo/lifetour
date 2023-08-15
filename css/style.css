@@ -1292,12 +1292,20 @@ button,
   padding: 5px;
 }
 
-.nav__link:active:not([disabled])::before {
-  background-color: rgba(255, 255, 255, 0);
+.nav__link:hover:not([disabled])::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
 }
 
-.is-open .nav__link.focus-visible:focus {
-  outline: 1px solid #2d383f;
+.nav__link:active:not([disabled])::before {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* @mixin hover-focus {
@@ -1399,19 +1407,21 @@ button,
     text-transform: uppercase;
   }
 
-  .is-open .nav__link:active:not([disabled])::before {
-    background-color: rgba(255, 255, 255, 0);
+  .is-open .nav__link.focus-visible:focus {
+    outline: 1px solid #2d383f;
   }
-}
 
-@media (max-width: 1199px) and (hover: hover) {
-  .is-open .nav__link:hover:not(.focus-visible)::before {
+  .is-open .nav__link:hover:not([disabled])::before {
     content: "";
     position: absolute;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     background-color: #2d383f;
     bottom: -2px;
+  }
+
+  .is-open .nav__link:active:not([disabled])::before {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -1548,17 +1558,5 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .nav__link:hover:not(.focus-visible)::before {
-    content: "";
-    position: absolute;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-    bottom: 1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ffffff;
   }
 }
