@@ -1292,16 +1292,11 @@ button,
   padding: 5px;
 }
 
-.nav__link:hover:not([disabled])::before {
+.nav__link::before {
   content: "";
   position: absolute;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  bottom: 1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #ffffff;
 }
 
 .nav__link:active:not([disabled])::before {
@@ -1407,21 +1402,26 @@ button,
     text-transform: uppercase;
   }
 
-  .is-open .nav__link.focus-visible:focus {
-    outline: 1px solid #2d383f;
-  }
-
-  .is-open .nav__link:hover:not([disabled])::before {
+  .is-open .nav__link::before {
     content: "";
     position: absolute;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
-    background-color: #2d383f;
     bottom: -2px;
+  }
+
+  .is-open .nav__link.focus-visible:focus {
+    outline: 1px solid #2d383f;
   }
 
   .is-open .nav__link:active:not([disabled])::before {
     background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@media (max-width: 1199px) and (hover: hover) {
+  .is-open .nav__link:hover:not(.focus-visible)::before {
+    background-color: #2d383f;
   }
 }
 
@@ -1558,5 +1558,13 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .nav__link:hover:not(.focus-visible)::before {
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
   }
 }
