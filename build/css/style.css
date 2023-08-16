@@ -1208,8 +1208,18 @@ button,
   z-index: 3;
 }
 
+.header__logo-link.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
+}
+
 .is-open .header__logo-link {
   color: #2d383f;
+}
+
+.is-open .header__logo-link.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
 }
 
 .header__tel {
@@ -1233,8 +1243,18 @@ button,
   z-index: 3;
 }
 
+.header__tel-link.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
+}
+
 .is-open .header__tel-link {
   color: #2d383f;
+}
+
+.is-open .header__tel-link.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
 }
 
 .header__toggle {
@@ -1243,6 +1263,12 @@ button,
   border: none;
   color: #ffffff;
   z-index: 3;
+  cursor: pointer;
+}
+
+.header__toggle.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
 }
 
 .header__toggle-closed {
@@ -1254,6 +1280,11 @@ button,
   position: relative;
   display: block;
   margin: 0 2px;
+}
+
+.is-open .header__toggle-closed.focus-visible:focus {
+  color: #1c3374;
+  outline: none;
 }
 
 .is-open .header__toggle-opened {
@@ -1289,7 +1320,7 @@ button,
   display: inline-block;
   color: inherit;
   font-size: 16px;
-  padding: 5px;
+  padding: 2px;
 }
 
 .nav__link::before {
@@ -1297,6 +1328,10 @@ button,
   position: absolute;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+}
+
+.nav__link.focus-visible:focus {
+  outline: 1px solid #ffffff;
 }
 
 /* @mixin hover-focus {
@@ -1544,7 +1579,7 @@ button,
 }
 
 @media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
+  .btn:hover {
     opacity: 0.8;
   }
 
@@ -1556,8 +1591,62 @@ button,
     background-color: rgba(0, 0, 0, 0.4);
   }
 
+  .header__logo-link:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .header__logo-link:active {
+    color: #0266c1;
+  }
+
+  .is-open .header__logo-link:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .is-open .header__logo-link:active {
+    color: #0266c1;
+  }
+
+  .header__tel-link:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .header__tel-link:active {
+    color: #0266c1;
+  }
+
+  .is-open .header__tel-link:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .is-open .header__tel-link:active {
+    color: #0266c1;
+  }
+
+  .header__toggle:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .header__toggle:active {
+    color: #0266c1;
+  }
+
+  .is-open .header__toggle-closed:hover {
+    color: #1c3374;
+    outline: none;
+  }
+
+  .is-open .header__toggle-closed:active {
+    color: #0266c1;
+  }
+
   .nav__link:hover::before {
-    bottom: 1px;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 1px;

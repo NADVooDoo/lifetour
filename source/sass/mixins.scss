@@ -27,13 +27,11 @@
 }
 
 @mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
+  @include hover {
+    @content;
   }
 
-  &.focus-visible:focus {
+  @include focus {
     @content;
   }
 }
