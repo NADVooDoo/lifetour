@@ -6,14 +6,13 @@
     flex-direction: column;
     left: 0;
     opacity: 0;
-    margin: 0;
-    padding: 150px 45px 70px;
-    position: fixed;
     pointer-events: none;
+    position: fixed;
     top: 0;
-    transition: top $trans-default;
     right: 0;
     visibility: hidden;
+    margin: 0;
+    padding: 150px 45px 70px;
   }
 
   @include vp-767 {
@@ -30,18 +29,17 @@
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 710px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  gap: 5px 31px;
-  flex-wrap: wrap;
-  max-width: 720px;
+  gap: 0 27px;
+  max-width: 750px;
   justify-content: center;
 
   @include vp-1199 {
     flex-direction: column;
     gap: 16px 0;
+    overflow-y: auto;
   }
 }
 

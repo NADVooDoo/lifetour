@@ -1,5 +1,5 @@
 .header {
-  background-color: $color-polo-blue;
+  z-index: 2;
 }
 
 .header__wrapper {
@@ -7,15 +7,17 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
-  padding-bottom: 40px;
   color: $color-default-white;
   transition: color $trans-default;
+
+  @include vp-1199 {
+    padding-top: 29px;
+  }
 
   @include vp-767 {
     display: grid;
     padding-top: 15px;
-    padding-bottom: 15px;
-    gap: 7px 0;
+    gap: 0;
     grid-template-columns: min-content 1fr;
     justify-items: end;
   }
@@ -26,7 +28,10 @@
   z-index: 3;
 
   @include vp-767 {
-    grid-area: 1/2/2/3;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
   }
 
   @include hover-focus {
@@ -40,20 +45,23 @@
 }
 
 .is-open .header__logo-link {
-  color: $color-elephant;
+  @include vp-1199 {
+    color: $color-elephant;
 
-  @include hover-focus {
-    color: $color-resolution-blue;
-    outline: none;
-  }
+    @include hover-focus {
+      color: $color-resolution-blue;
+      outline: none;
+    }
 
-  @include active {
-    color: $color-navy-blue;
+    @include active {
+      color: $color-navy-blue;
+    }
   }
 }
 
 .header__logo-image {
   @include vp-1199 {
+    margin-left: 93px;
     width: 144px;
     height: 44px;
   }
@@ -72,7 +80,10 @@
   gap: 5px 0;
 
   @include vp-767 {
-    grid-area: 2/2/3/3;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
   }
 }
 
@@ -90,7 +101,10 @@
 
   @include vp-767 {
     font-size: 14px;
-    grid-area: 2/2/3/3;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
   }
 
   @include hover-focus {
@@ -104,15 +118,17 @@
 }
 
 .is-open .header__tel-link {
-  color: $color-elephant;
+  @include vp-1199 {
+    color: $color-elephant;
 
-  @include hover-focus {
-    color: $color-resolution-blue;
-    outline: none;
-  }
+    @include hover-focus {
+      color: $color-resolution-blue;
+      outline: none;
+    }
 
-  @include active {
-    color: $color-navy-blue;
+    @include active {
+      color: $color-navy-blue;
+    }
   }
 }
 
@@ -126,6 +142,11 @@
 
   @include vp-1199 {
     display: block;
+    margin-left: -6px;
+  }
+
+  @include vp-767 {
+    margin-top: -8px;
   }
 
   @include hover-focus {
