@@ -5,6 +5,7 @@ import {getHeroSlider} from './modules/hero/init-hero-swiper';
 import {getHeight} from './modules/hero/get-height';
 import {initVideo} from './modules/hero/video';
 import {initAudio} from './modules/hero/audio';
+import {getToursSlider} from './modules/init-tours-swiper';
 
 // ---------------------------------
 
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initVideo();
     initAudio();
+    getToursSlider();
     const form = new Form();
     window.form = form;
     form.init();
