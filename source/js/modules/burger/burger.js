@@ -61,7 +61,16 @@ export class Burger {
   }
 
   _onDocumentClick(evt) {
-    if (evt.target.hasAttribute('data-close-menu')) {
+    const target = evt.target;
+    if (target.closest('[data-link-menu]') && target.hash) {
+      evt.preventDefault();
+      const targetId = target.hash.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        this._closeMenu();
+        targetElement.scrollIntoView({behavior: 'smooth'});
+      }
+    } else if (!this._header.contains(target)) {
       this._closeMenu();
     }
   }

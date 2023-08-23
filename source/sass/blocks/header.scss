@@ -120,6 +120,7 @@
 .is-open .header__tel-link {
   @include vp-1199 {
     color: $color-elephant;
+    justify-self: end;
 
     @include hover-focus {
       color: $color-resolution-blue;
@@ -182,3 +183,9 @@
 .is-open .header__toggle-opened {
   display: none;
 }
+
+// .is-open .header__wrapper {
+//   @include vp-1199 {
+//     position: fixed;
+//   }
+// }
