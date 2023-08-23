@@ -6,6 +6,7 @@ import {getHeight} from './modules/hero/get-height';
 import {initVideo} from './modules/hero/video';
 import {initAudio} from './modules/hero/audio';
 import {getToursSlider} from './modules/init-tours-swiper';
+import {isMobileDevice} from './utils/is-mobile-device';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  isMobileDevice();
   getHeight();
   const burger = new Burger();
   burger.init();

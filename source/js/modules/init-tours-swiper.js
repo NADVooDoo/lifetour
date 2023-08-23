@@ -1,8 +1,10 @@
 import Swiper from '../vendor/swiper';
+import {isMobileDevice} from '../utils/is-mobile-device';
 
 const getToursSlider = () => {
   if (document.querySelector('.tours__slider')) {
     return new Swiper('.tours__slider', {
+      allowTouchMove: isMobileDevice(),
       direction: 'horizontal',
       breakpoints: {
         0: {
@@ -11,7 +13,6 @@ const getToursSlider = () => {
           spaceBetween: 100,
         },
         768: {
-          allowTouchMove: false,
           centeredSlides: false,
           slidesPerView: 2,
           spaceBetween: 18,
