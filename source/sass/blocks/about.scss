@@ -1,0 +1,137 @@
+.about {
+  position: relative;
+}
+
+.about__header {
+  position: relative;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0 0 59px;
+
+  &::before {
+    content: attr(data-shadow);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: max-content;
+    font-size: 55px;
+    line-height: 55px;
+    opacity: 0.03;
+
+    @include vp-1199 {
+      bottom: -2px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      top: -4px;
+      bottom: auto;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 35px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+
+.about__background {
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  z-index: -1;
+
+  &--right {
+    top: -140px;
+    right: 0;
+    left: auto;
+  }
+
+  @include vp-1199 {
+    bottom: 84px;
+
+    &--right {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    top: 9px;
+  }
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 61px;
+  padding-bottom: 60px;
+
+  @include vp-1199 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.about__content {
+  max-width: calc(41vw - 13px);
+
+  @include vp-1199 {
+    max-width: calc(42vw + 2px);
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 428px 0 0;
+  }
+}
+
+.about__subheader {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+
+  @include vp-1199 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.about__body-text {
+  margin: 0 0 30px;
+  font-size: 14px;
+  line-height: 22px;
+
+  @include vp-1199 {
+    margin: 0 0 6px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 41px;
+    line-height: 20px;
+  }
+}

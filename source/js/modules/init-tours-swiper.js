@@ -2,8 +2,8 @@ import Swiper from '../vendor/swiper';
 import {isMobileDevice} from '../utils/is-mobile-device';
 
 const getToursSlider = () => {
-  if (document.querySelector('.tours__slider')) {
-    return new Swiper('.tours__slider', {
+  if (document.querySelector('[data-tours-slider]')) {
+    return new Swiper('[data-tours-slider]', {
       allowTouchMove: isMobileDevice(),
       direction: 'horizontal',
       breakpoints: {
@@ -24,8 +24,8 @@ const getToursSlider = () => {
         },
       },
       navigation: {
-        nextEl: '.tours__next',
-        prevEl: '.tours__prev',
+        nextEl: '[data-tours-next]',
+        prevEl: '[data-tours-prev]',
       },
     });
   }

@@ -61,17 +61,13 @@ export class Burger {
   }
 
   _onDocumentClick(evt) {
-    const target = evt.target;
-    if (target.closest('[data-link-menu]') && target.hash) {
-      evt.preventDefault();
-      const targetId = target.hash.slice(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
+    if (this._isMenuOpen) {
+      const closeMenuButton = evt.target.closest('[data-close-menu]');
+      const linkMenuButton = evt.target.closest('[data-link-menu]');
+
+      if (closeMenuButton || linkMenuButton) {
         this._closeMenu();
-        targetElement.scrollIntoView({behavior: 'smooth'});
       }
-    } else if (!this._header.contains(target)) {
-      this._closeMenu();
     }
   }
 }

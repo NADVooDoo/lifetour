@@ -1,8 +1,8 @@
 const getHeight = () => {
-  if (document.querySelector('.header')) {
-    const headerElement = document.querySelector('.header');
-    const heroElement = document.querySelector('.hero');
-    const contentElement = heroElement.querySelector('.hero__content');
+  if (document.querySelector('[data-header]')) {
+    const headerElement = document.querySelector('[data-header]');
+    const heroElement = document.querySelector('[data-hero]');
+    const contentElement = heroElement.querySelector('[data-hero-content]');
 
     const setHeight = () => {
       heroElement.style.marginTop = `-${headerElement.offsetHeight}px`;

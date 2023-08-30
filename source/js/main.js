@@ -7,6 +7,8 @@ import {initVideo} from './modules/hero/video';
 import {initAudio} from './modules/hero/audio';
 import {getToursSlider} from './modules/init-tours-swiper';
 import {isMobileDevice} from './utils/is-mobile-device';
+import {getCoachingSlider} from './modules/init-coaching-swiper';
+import {getReviewsSlider} from './modules/init-reviews-swiper';
 
 // ---------------------------------
 
@@ -25,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
   burger.init();
   getHeroSlider();
+  getReviewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -32,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideo();
     initAudio();
     getToursSlider();
+    getCoachingSlider();
     const form = new Form();
     window.form = form;
     form.init();
