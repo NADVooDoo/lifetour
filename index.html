@@ -891,19 +891,19 @@
           <div class="reviews__top">
             <h2 class="reviews__header" data-shadow="Отзывы">Отзывы</h2>
             <div class="reviews__arrows arrows">
-              <button class="reviews__prev arrow" type="button" aria-label="Предыдущий слайд.">
+              <button class="reviews__prev arrow" type="button" aria-label="Предыдущий слайд." data-reviews-prev>
                 <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#arrow-left"></use>
                 </svg>
               </button>
-              <button class="reviews__next arrow" type="button" aria-label="Следующий слайд.">
+              <button class="reviews__next arrow" type="button" aria-label="Следующий слайд." data-reviews-next>
                 <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#arrow-right"></use>
                 </svg>
               </button>
             </div>
           </div>
-          <div class="reviews__slider swiper">
+          <div class="reviews__slider swiper" data-reviews-slider>
             <ul class="reviews__list swiper-wrapper">
               <li class="reviews__item swiper-slide">
                 <picture>
@@ -1041,11 +1041,371 @@
         </picture>
       </section>
 
+      <section class="advantages" id="advantages">
+        <div class="advantages__container container">
+          <h2 class="advantages__header" data-shadow="Преимущества">Преимущества</h2>
+          <div class="advantages__slider swiper" data-advantages-slider>
+            <ul class="advantages__list swiper-wrapper">
+              <li class="advantages__item swiper-slide">
+                <span class="advantages__icon">
+                  <svg width="22" height="22" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#levelup"></use>
+                  </svg>
+                </span>
+                <div class="advantages__text">
+                  <h3 class="advantages__subheader">Безопасность и&nbsp;охрана</h3>
+                  <p class="advantages__text-message">Уделяем внимание безопасности клиентов, внедряя строгие процедуры
+                    и&nbsp;протоколы безопасности.
+                    Имеем планы действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной
+                    безопасности во&nbsp;время всего тура.</p>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <span class="advantages__icon">
+                  <svg width="22" height="22" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#crown"></use>
+                  </svg>
+                </span>
+                <div class="advantages__text">
+                  <h3 class="advantages__subheader">Экспертиза и&nbsp;знания</h3>
+                  <p class="advantages__text-message">Наша команда опытных гидов имеет обширные знания о&nbsp;местности,
+                    погодных условиях и&nbsp;технике
+                    безопасности. Это гарантирует, что наши клиенты находятся в&nbsp;надежных руках и&nbsp;могут
+                    в&nbsp;полной мере насладиться опытом без опасений.</p>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <span class="advantages__icon">
+                  <svg width="22" height="22" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#boots"></use>
+                  </svg>
+                </span>
+                <div class="advantages__text">
+                  <h3 class="advantages__subheader">Оборудование и&nbsp;снаряжение</h3>
+                  <p class="advantages__text-message">Мы&nbsp;предоставляем клиентам все необходимое оборудование,
+                    необходимое для путешествия. Это
+                    избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение, что делает
+                    путешествие более удобным и&nbsp;экономически выгодным.</p>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <span class="advantages__icon">
+                  <svg width="22" height="22" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#road"></use>
+                  </svg>
+                </span>
+                <div class="advantages__text">
+                  <h3 class="advantages__subheader">Индивидуальные маршруты</h3>
+                  <p class="advantages__text-message">Предлагает широкий выбор туров, отвечающих различным уровням
+                    мастерства и&nbsp;интересам.
+                    Мы&nbsp;также можем адаптировать маршруты к&nbsp;вашим конкретным потребностям и&nbsp;предпочтениям,
+                    чтобы вы&nbsp;получили индивидуальный опыт.</p>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <span class="advantages__icon">
+                  <svg width="22" height="22" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#leaf"></use>
+                  </svg>
+                </span>
+                <div class="advantages__text">
+                  <h3 class="advantages__subheader">Бережное отношение к&nbsp;природе</h3>
+                  <p class="advantages__text-message">Уделяем первостепенное внимание охране окружающей среды
+                    и&nbsp;гарантируем, что туры оказывают
+                    минимальное воздействие на&nbsp;природную среду. Наша компания следует принципу
+                    &laquo;Не&nbsp;оставлять следов&raquo;.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="advantages__arrows arrows">
+            <button class="advantages__prev arrow" type="button" aria-label="Предыдущий слайд" data-advantages-prev>
+              <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="advantages__next arrow" type="button" aria-label="Следующий слайд" data-advantages-next>
+              <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <picture aria-hidden="true">
+          <source type="image/webp"
+            srcset="img/background-cloud-advantages.webp, img/background-cloud-advantages@2x.webp 2x" width="602"
+            height="263">
+          <img src="img/background-cloud-advantages.png" srcset="img/background-cloud-advantages@2x.png 2x" width="602"
+            height="263" alt="Облако." loading="lazy">
+        </picture>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery__container container">
+          <h2 class="gallery__header" data-shadow="Фотогалерея">Фотогалерея</h2>
+          <div class="gallery__top">
+            <div class="gallery__text">
+              <p class="gallery__text-message">Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также
+                отмечайте нас на&nbsp;фото.
+                Лучшие фотографии украсят этот раздел нашего сайта.</p>
+            </div>
+            <div class="gallery__arrows arrows">
+              <button class="gallery__prev arrow" type="button" aria-label="Предыдущее фото" data-gallery-prev>
+                <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <button class="gallery__next arrow" type="button" aria-label="Следующее фото" data-gallery-next>
+                <svg class="arrow__icon" width="14" height="8" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__slider swiper" data-gallery-slider>
+            <ul class="gallery__list swiper-wrapper">
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/001.webp, img/gallery/001@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/001.jpg" srcset="img/gallery/001@2x.jpg 2x" width="275" height="449"
+                    alt="Альпинист на краю обрыва." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/002.webp, img/gallery/002@2x.webp 2x" width="298"
+                    height="179">
+                  <img src="img/gallery/002.jpg" srcset="img/gallery/002@2x.jpg 2x" width="298" height="179"
+                    alt="Туристы вокруг костра." loading="lazy">
+                </picture>
+                <picture class="gallery__picture-bottom">
+                  <source type="image/webp" srcset="img/gallery/003.webp, img/gallery/003@2x.webp 2x" width="298"
+                    height="265">
+                  <img src="img/gallery/003.jpg" srcset="img/gallery/003@2x.jpg 2x" width="298" height="265"
+                    alt="Рука которая держит компас на фоне гор." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/004.webp, img/gallery/004@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/004.jpg" srcset="img/gallery/004@2x.jpg 2x" width="275" height="449"
+                    alt="Группа людей, идущих по горе." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/005.webp, img/gallery/005@2x.webp 2x" width="298"
+                    height="179">
+                  <img src="img/gallery/005.jpg" srcset="img/gallery/005@2x.jpg 2x" width="298" height="179"
+                    alt="Спуск альпинистов на фоне горы." loading="lazy">
+                </picture>
+                <picture class="gallery__picture-bottom">
+                  <source type="image/webp" srcset="img/gallery/006.webp, img/gallery/006@2x.webp 2x" width="298"
+                    height="265">
+                  <img src="img/gallery/006.jpg" srcset="img/gallery/006@2x.jpg 2x" width="298" height="265"
+                    alt="Голубая палатка под звездным небом." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/007.webp, img/gallery/007@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/007.jpg" srcset="img/gallery/007@2x.jpg 2x" width="275" height="449"
+                    alt="Туристы в глухом лесу." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/001.webp, img/gallery/001@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/001.jpg" srcset="img/gallery/001@2x.jpg 2x" width="275" height="449"
+                    alt="Альпинист на краю обрыва." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/001.webp, img/gallery/001@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/001.jpg" srcset="img/gallery/001@2x.jpg 2x" width="275" height="449"
+                    alt="Альпинист на краю обрыва." loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/001.webp, img/gallery/001@2x.webp 2x" width="275"
+                    height="449">
+                  <img src="img/gallery/001.jpg" srcset="img/gallery/001@2x.jpg 2x" width="275" height="449"
+                    alt="Альпинист на краю обрыва." loading="lazy">
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="feedback__container container">
+          <h2 class="feedback__header">Остались вопросы?</h2>
+          <div class="feedback__text">
+            <p class="feedback__text-message">Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.
+            </p>
+          </div>
+          <div class="feedback__form" data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate="">
+              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required="">
+                <label>
+                  <span class="custom-input__label">Введите ваше имя.</span>
+                  <input id="name" type="text" name="name" pattern="^[а-яА-ЯёЁa-zA-Z]+$"
+                    placeholder="Как к вам обращаться?" required="">
+                </label>
+              </div>
+              <div class="custom-input" data-validate-type="phone" data-matrix-limitations="digit"
+                data-phone-length="18" data-required="">
+                <label>
+                  <span class="custom-input__label">Введите ваш номер телефона.</span>
+                  <input id="tel" type="tel" name="tel" pattern="^(\+)|[\d\s]+$" minlength="11" placeholder="Телефон"
+                    required=""></label>
+              </div>
+              <button class="feedback__button button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/background-feedback-mobile.webp, img/background-feedback-mobile@2x.webp 2x" width="320"
+            height="621">
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="img/background-feedback-tablet.webp, img/background-feedback-tablet@2x.webp 2x" width="768"
+            height="679">
+          <source type="image/webp"
+            srcset="img/background-feedback-desktop.webp, img/background-feedback-desktop@2x.webp 2x" width="1440"
+            height="800">
+          <source media="(max-width: 767px)"
+            srcset="img/background-feedback-mobile.jpg, img/background-feedback-mobile@2x.jpg 2x" width="320"
+            height="621">
+          <source media="(max-width: 1199px)"
+            srcset="img/background-feedback-tablet.jpg, img/background-feedback-tablet@2x.jpg 2x" width="768"
+            height="679">
+          <img src="img/background-feedback-desktop.jpg" srcset="img/background-feedback-desktop@2x.jpg 2x" width="1440"
+            height="800" alt="Фон: деревья в снегу." loading="lazy">
+        </picture>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <div class="contacts__container container">
+          <div class="contacts__content">
+            <h2 class="contacts__header" data-shadow="Контакты">Контакты</h2>
+            <div class="contacts__body-text">
+              <p class="contacts__text-message">Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите
+                к&nbsp;нам в&nbsp;гости. Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас
+                тур.</p>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <svg width="26" height="26" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#phone"></use>
+                </svg>
+                <p class="contacts__subtitle">Телефон</p>
+                <a class="contacts__text" href="tel:89837454545">8 983 745 45 45</a>
+              </li>
+              <li class="contacts__item">
+                <svg width="26" height="26" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#mail"></use>
+                </svg>
+                <p class="contacts__subtitle">E-mail</p>
+                <a class="contacts__text" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              </li>
+              <li class="contacts__item">
+                <svg width="26" height="26" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#address"></use>
+                </svg>
+                <p class="contacts__subtitle">Адрес</p>
+                <p class="contacts__text">г. Москва, пр-т Мира, д.&nbsp;14, офис 101</p>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map" id="map">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/map-mobile.webp, img/map-mobile@2x.webp 2x" width="290" height="320">
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="img/map-tablet.webp, img/map-tablet@2x.webp 2x" width="678" height="340">
+              <source type="image/webp" srcset="img/map-desktop.webp, img/map-desktop@2x.webp 2x" width="585"
+                height="324">
+              <source media="(max-width: 767px)" srcset="img/map-mobile.jpg, img/map-mobile@2x.jpg 2x" width="290"
+                height="320">
+              <source media="(max-width: 1199px)" srcset="img/map-tablet.jpg, img/map-tablet@2x.jpg 2x" width="678"
+                height="340">
+              <img src="img/map-desktop.jpg" srcset="img/map-desktop@2x.jpg 2x" width="585" height="324"
+                alt="Адрес магазина на карте." loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer>
-      <div class="container">
-
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__top">
+          <a class="footer__logo-link" href="index.html" aria-label="На главную страницу">
+            <svg class="footer__logo-image" width="205" height="60" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#tours">Туры</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#coaching">Обучение</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#about">О нас</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#gallery">Фотографии</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <div class="footer__right">
+            <a class="footer__tel" href="tel:88007253232">8 800 725 32 32</a>
+          </div>
+        </div>
+        <section class="footer__social">
+          <h2 class="visually-hidden">Социальные сети.</h2>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="ВКонтакте">
+                <svg width="16" height="9" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="Одноклассники">
+                <svg width="9" height="16" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="Reddit">
+                <svg width="14" height="15" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <a class="footer__politics" href="#!">Политика конфиденциальности</a>
       </div>
     </footer>
 
