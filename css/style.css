@@ -3702,10 +3702,15 @@ button,
   right: -50vw;
 }
 
+.coaching__text-promo {
+  max-width: 820px;
+  font-size: 16px;
+  margin: 33px 0 60px;
+}
+
 .coaching__text {
   font-size: 16px;
-  max-width: 820px;
-  margin: 33px 0 60px;
+  margin: 0;
 }
 
 .instructors__top {
@@ -5003,12 +5008,7 @@ button,
   .coaching__text {
     font-size: 16px;
     max-width: 80%;
-    margin: 0;
     line-height: 24px;
-  }
-
-  .coaching__text--map {
-    margin: 0;
   }
 
   .instructors__top {
