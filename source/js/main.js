@@ -9,6 +9,9 @@ import {getToursSlider} from './modules/init-tours-swiper';
 import {isMobileDevice} from './utils/is-mobile-device';
 import {getCoachingSlider} from './modules/init-coaching-swiper';
 import {getReviewsSlider} from './modules/init-reviews-swiper';
+import {getAdvantagesSlider} from './modules/init-advantages-swiper';
+import {getGallerySlider} from './modules/init-gallery-swiper';
+import {getMap} from './modules/map/init-map';
 
 // ---------------------------------
 
@@ -28,6 +31,9 @@ window.addEventListener('DOMContentLoaded', () => {
   burger.init();
   getHeroSlider();
   getReviewsSlider();
+  getAdvantagesSlider();
+  getGallerySlider();
+  getMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

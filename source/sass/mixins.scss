@@ -42,6 +42,16 @@
   }
 }
 
+@mixin focus-active {
+  @include focus {
+    @content;
+  }
+
+  @include active {
+    @content;
+  }
+}
+
 // Desktop first
 
 @mixin vp-1919 {
