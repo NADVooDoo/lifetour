@@ -3708,10 +3708,6 @@ button,
   margin: 33px 0 60px;
 }
 
-.training__text > *:last-child {
-  margin: 0;
-}
-
 .instructors__top {
   display: -webkit-box;
   display: -ms-flexbox;
