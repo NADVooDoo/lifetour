@@ -3,9 +3,9 @@ import {isMobileDevice} from '../../utils/is-mobile-device';
 
 const getHeroSlider = () => {
   const sliderElement = document.querySelector('[data-hero-slider]');
-  if (sliderElement) {
+
+  const createSlider = () => {
     return new Swiper(sliderElement, {
-      loop: true,
       allowTouchMove: isMobileDevice(),
       direction: 'horizontal',
       speed: 300,
@@ -16,8 +16,30 @@ const getHeroSlider = () => {
           return `<button class="hero__pagination-button ${className}" type="button" aria-label="Перейти к ${index + 1} слайду"></button>`;
         },
       },
+      on: {
+        init() {
+          pauseMediaOnSlide(this);
+        },
+        slideChange() {
+          pauseMediaOnSlide(this);
+        },
+      },
     });
+  };
+
+  const pauseMediaOnSlide = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const mediaElements = activeSlide.querySelectorAll('video, audio');
+
+    mediaElements.forEach((media) => {
+      media.play();
+    });
+  };
+
+  if (sliderElement) {
+    return createSlider();
   }
+
   return null;
 };
 
