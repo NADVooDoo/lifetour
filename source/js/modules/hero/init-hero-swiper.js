@@ -5,6 +5,7 @@ const getHeroSlider = () => {
   const sliderElement = document.querySelector('[data-hero-slider]');
   if (sliderElement) {
     return new Swiper(sliderElement, {
+      loop: true,
       allowTouchMove: isMobileDevice(),
       direction: 'horizontal',
       speed: 300,

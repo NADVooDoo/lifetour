@@ -2282,13 +2282,6 @@ button,
   margin: 0 auto;
 }
 
-.arrows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0 4px;
-}
-
 .arrow {
   position: relative;
   display: block;
@@ -2319,6 +2312,13 @@ button,
   position: absolute;
   margin: auto;
   inset: 0;
+}
+
+.arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 4px;
 }
 
 .button {
@@ -2893,18 +2893,18 @@ button,
   color: #2d383f;
 }
 
-.is-open .header__toggle-closed {
+.header.is-open .header__toggle-closed {
   position: relative;
   display: block;
   margin: 0 2px;
 }
 
-.is-open .header__toggle-closed.focus-visible:focus {
+.header.is-open .header__toggle-closed.focus-visible:focus {
   color: #1c3374;
   outline: none;
 }
 
-.is-open .header__toggle-opened {
+.header.is-open .header__toggle-opened {
   display: none;
 }
 
@@ -3139,7 +3139,7 @@ button,
   opacity: 0.5;
 }
 
-.hero__slider .swiper-pagination-bullet-active {
+.hero__slider .hero__pagination-button[aria-current] {
   background-color: #ffffff;
 }
 
@@ -4681,20 +4681,20 @@ button,
     font-size: 16px;
   }
 
-  .is-open .header__tel-link {
+  .header__toggle {
+    display: block;
+    margin-left: -6px;
+  }
+
+  .header.is-open .header__tel-link {
     color: #2d383f;
     -ms-grid-column-align: end;
     justify-self: end;
   }
 
-  .is-open .header__tel-link.focus-visible:focus {
+  .header.is-open .header__tel-link.focus-visible:focus {
     color: #1c3374;
     outline: none;
-  }
-
-  .header__toggle {
-    display: block;
-    margin-left: -6px;
   }
 
   .nav {
@@ -5406,12 +5406,12 @@ button,
     color: #0266c1;
   }
 
-  .is-open .header__tel-link:hover {
+  .header.is-open .header__tel-link:hover {
     color: #1c3374;
     outline: none;
   }
 
-  .is-open .header__tel-link:active {
+  .header.is-open .header__tel-link:active {
     color: #0266c1;
   }
 
@@ -6287,12 +6287,12 @@ button,
     color: #0266c1;
   }
 
-  .is-open .header__toggle-closed:hover {
+  .header.is-open .header__toggle-closed:hover {
     color: #1c3374;
     outline: none;
   }
 
-  .is-open .header__toggle-closed:active {
+  .header.is-open .header__toggle-closed:active {
     color: #0266c1;
   }
 

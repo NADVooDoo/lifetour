@@ -15,11 +15,12 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
-@import "global/arrows";
 
 // Blocks
 // ---------------------------------
 
+@import "blocks/arrow";
+@import "blocks/arrows";
 @import "blocks/button";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";

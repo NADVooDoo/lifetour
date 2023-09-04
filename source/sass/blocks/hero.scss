@@ -277,8 +277,8 @@
   @include active {
     opacity: 0.2;
   }
-}
 
-.hero__slider .swiper-pagination-bullet-active {
-  background-color: $color-default-white;
+  &[aria-current] {
+    background-color: $color-default-white;
+  }
 }
