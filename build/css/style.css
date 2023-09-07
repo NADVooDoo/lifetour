@@ -4166,7 +4166,7 @@ button,
   opacity: 0.03;
 }
 
-.advantages__slider {
+.advantages__container .advantages__slider {
   width: 2020px;
   margin: 0 0 50px -410px;
 }
@@ -5290,7 +5290,7 @@ button,
     margin: 0 0 45px;
   }
 
-  .advantages__slider {
+  .advantages__container .advantages__slider {
     width: 100%;
     margin: 0;
   }
