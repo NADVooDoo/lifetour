@@ -2989,12 +2989,18 @@ button,
   -ms-flex-line-pack: start;
   align-content: flex-start;
   padding-top: 109px;
-  padding-bottom: 80px;
-  margin-top: -19px;
+  padding-bottom: 0;
+  margin-top: -25px;
 }
 
 .hero__content--kamchatka {
-  padding-bottom: 82px;
+  padding-bottom: -2px;
+  padding-top: 92px;
+}
+
+.hero__content--altai {
+  padding-bottom: 81px;
+  padding-top: 92px;
 }
 
 .hero__button {
@@ -3049,17 +3055,17 @@ button,
   height: auto;
 }
 
-.hero__slider .hero__pagination {
-  position: absolute;
+.hero__pagination {
+  position: relative;
+  top: -107px;
+  height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
-  right: -8px;
-  bottom: 98px;
-  z-index: 1;
+  z-index: 2;
   gap: 0 7px;
 }
 
@@ -3123,7 +3129,7 @@ button,
 }
 
 .hero__photo {
-  margin-top: 112px;
+  margin-top: 135px;
 }
 
 .hero__photo img {
@@ -3131,11 +3137,11 @@ button,
 }
 
 .hero__video {
-  margin: 211px 0 0;
+  margin: 221px 0 0;
 }
 
 .hero__audio {
-  margin: 211px 0 0;
+  margin: 235px 0 0;
 }
 
 .hero__body-text {
@@ -3149,7 +3155,15 @@ button,
   grid-row-end: 2;
   -ms-grid-column-span: 1;
   grid-column-end: 2;
-  margin: 93px -100px 20px 0;
+  margin: 99px -100px 20px 0;
+}
+
+.hero__body-text--kamchatka {
+  margin: 115px -188px 20px 0;
+}
+
+.hero__body-text--altai {
+  margin: 116px -188px 20px 0;
 }
 
 .hero__info {
@@ -3159,7 +3173,7 @@ button,
   margin-top: 0;
 }
 
-.hero__slider .hero__pagination-button {
+.hero .hero__pagination-button {
   width: 10px;
   height: 10px;
   margin: 0;
@@ -3171,13 +3185,25 @@ button,
   transition: all 0.3s ease;
 }
 
-.hero__slider .hero__pagination-button.focus-visible:focus {
+.hero .hero__pagination-button.focus-visible:focus {
   background-color: #ffffff;
   opacity: 0.5;
 }
 
-.hero__slider .hero__pagination-button[aria-current] {
+.hero .hero__pagination-button[aria-current] {
   background-color: #ffffff;
+}
+
+.hero__slider .swiper-slide {
+  visibility: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.hero__slider .swiper-slide.swiper-slide-active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .video {
@@ -3227,6 +3253,19 @@ button,
   bottom: 0;
   left: 6px;
   margin: auto;
+}
+
+.video__player {
+  display: none;
+}
+
+.video.is-active .video__button,
+.video.is-active img {
+  display: none;
+}
+
+.video.is-active .video__player {
+  display: block;
 }
 
 .audio {
@@ -4824,7 +4863,11 @@ button,
     -ms-flex-align: center;
     align-items: center;
     padding-top: 80px;
-    padding-bottom: 159px;
+    padding-bottom: 38px;
+  }
+
+  .hero__content--kamchatka {
+    padding-bottom: 169px;
   }
 
   .hero__button {
@@ -4832,17 +4875,25 @@ button,
     padding: 22px 47px 20px;
   }
 
+  .hero__button--altai {
+    margin: 0 0 70px;
+  }
+
+  .hero__button--kamchatka {
+    margin: 0 0 35px;
+  }
+
   .hero__background img {
     -o-object-fit: fill;
     object-fit: fill;
   }
 
-  .hero__slider .hero__pagination {
+  .hero__pagination {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    bottom: 90px;
     right: 1px;
+    top: -102px;
   }
 
   .hero__details-item {
@@ -4881,8 +4932,16 @@ button,
   }
 
   .hero__body-text {
-    margin: 113px 0 11px;
+    margin: 119px 0 11px;
     text-align: center;
+  }
+
+  .hero__body-text--kamchatka {
+    margin: 105px 0 11px 0;
+  }
+
+  .hero__body-text--altai {
+    margin: 105px 0 11px 0;
   }
 
   .hero__info {
@@ -5570,9 +5629,13 @@ button,
 
   .hero__content {
     padding-top: 86px;
-    padding-bottom: 139px;
+    padding-bottom: 80px;
     margin-top: -45px;
-    margin-bottom: -68px;
+    margin-bottom: -63px;
+  }
+
+  .hero__content--kamchatka {
+    margin-bottom: -51px;
   }
 
   .hero__button {
@@ -5586,8 +5649,8 @@ button,
     object-fit: cover;
   }
 
-  .hero__slider .hero__pagination {
-    bottom: 40px;
+  .hero__pagination {
+    top: -50px;
     gap: 0 4px;
   }
 
@@ -5602,6 +5665,18 @@ button,
     display: none;
   }
 
+  .hero__body-text {
+    margin: 112px 0 11px;
+  }
+
+  .hero__body-text--kamchatka {
+    margin: 94px 0 11px;
+  }
+
+  .hero__body-text--altai {
+    margin: 92px 0 11px 0;
+  }
+
   .hero__info {
     max-width: 100%;
     font-size: 15px;
@@ -5609,7 +5684,7 @@ button,
     margin: 0 auto 9px;
   }
 
-  .hero__slider .hero__pagination-button {
+  .hero .hero__pagination-button {
     width: 8px;
     height: 8px;
   }
@@ -6383,12 +6458,12 @@ button,
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .hero__slider .hero__pagination-button:hover {
+  .hero .hero__pagination-button:hover {
     background-color: #ffffff;
     opacity: 0.5;
   }
 
-  .hero__slider .hero__pagination-button:active {
+  .hero .hero__pagination-button:active {
     opacity: 0.2;
   }
 
