@@ -9,6 +9,11 @@ const getHeroSlider = () => {
 
   return new Swiper(sliderElement, {
     loop: true,
+    breakpoints: {
+      768: {
+        loop: false,
+      },
+    },
     allowTouchMove: isMobileDevice(),
     speed: 300,
     pagination: {
