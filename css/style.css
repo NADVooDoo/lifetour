@@ -2240,6 +2240,19 @@ button,
   flex-grow: 1;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -4761,7 +4774,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     max-height: 50vh;
