@@ -62,3 +62,9 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.swiper-slide-duplicate {
+  @media (min-width: $vp-768) {
+    display: none;
+  }
+}

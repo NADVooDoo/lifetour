@@ -2963,9 +2963,13 @@ button,
   grid-template-columns: 1fr auto;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  padding-top: 89px;
+  padding-top: 109px;
   padding-bottom: 80px;
   margin-top: -19px;
+}
+
+.hero__content--kamchatka {
+  padding-bottom: 82px;
 }
 
 .hero__button {
@@ -2980,6 +2984,14 @@ button,
   grid-column-end: 2;
   -ms-grid-column-align: start;
   justify-self: start;
+}
+
+.hero__button--altai {
+  margin: 0 0 147px;
+}
+
+.hero__button--kamchatka {
+  margin: 0 0 147px;
 }
 
 .hero__background {
@@ -3021,7 +3033,7 @@ button,
   -ms-flex-pack: end;
   justify-content: end;
   right: -8px;
-  bottom: 90px;
+  bottom: 98px;
   z-index: 1;
   gap: 0 7px;
 }
@@ -3690,7 +3702,7 @@ button,
 
 .coaching__activity-body svg {
   position: absolute;
-  top: 11px;
+  bottom: 11px;
   left: 0;
 }
 
@@ -3993,6 +4005,7 @@ button,
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   gap: 0 30px;
+  height: auto;
 }
 
 .reviews__item picture {
@@ -4391,6 +4404,12 @@ button,
   line-height: 18px;
 }
 
+.contacts__adress {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .contacts__text {
   margin: 0;
   font-size: 16px;
@@ -4624,6 +4643,12 @@ button,
   }
 */
 
+@media (min-width: 768px) {
+  .swiper-slide-duplicate {
+    display: none;
+  }
+}
+
 @media (max-width: 1439px) {
   .hero__background img {
     -o-object-fit: cover;
@@ -4715,7 +4740,7 @@ button,
     right: 0;
     visibility: hidden;
     margin: 0;
-    padding: 150px 45px 70px;
+    padding: 122px 45px 66px;
   }
 
   .nav__list {
@@ -4723,7 +4748,11 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 16px 0;
+    gap: 20px 0;
+    overflow-y: scroll;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    max-height: 50vh;
   }
 
   .nav__link {
@@ -4762,8 +4791,8 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 104px;
-    padding-bottom: 130px;
+    padding-top: 80px;
+    padding-bottom: 159px;
   }
 
   .hero__button {
@@ -4808,7 +4837,7 @@ button,
   }
 
   .hero__photo img {
-    width: 410px;
+    width: 442px;
   }
 
   .hero__video {
@@ -4825,7 +4854,7 @@ button,
   }
 
   .hero__info {
-    max-width: 65%;
+    max-width: 68%;
     margin: 0 auto 17px;
   }
 
@@ -4950,7 +4979,7 @@ button,
   }
 
   .coaching__activity-body svg {
-    top: 8px;
+    bottom: 16px;
   }
 
   .coaching__activity-body--map::before {
@@ -5350,6 +5379,11 @@ button,
     line-height: 16px;
   }
 
+  .contacts__adress {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   .contacts__text {
     font-size: 14px;
     line-height: 22px;
@@ -5481,11 +5515,15 @@ button,
   }
 
   .header__toggle {
-    margin-top: -8px;
+    margin-top: -13px;
   }
 
   .nav {
-    padding: 150px 15px 70px;
+    padding: 95px 14px 46px;
+  }
+
+  .nav__list {
+    gap: 14px 0;
   }
 
   .nav__link {
@@ -5502,6 +5540,7 @@ button,
     padding-top: 86px;
     padding-bottom: 139px;
     margin-top: -45px;
+    margin-bottom: -68px;
   }
 
   .hero__button {
@@ -6017,11 +6056,12 @@ button,
   }
 
   .feedback__form form {
-    gap: 4px 0;
+    gap: 7px 0;
   }
 
   .feedback__button {
     margin: 1px 0 0;
+    padding: 22px 54px 15px;
   }
 
   .contacts__container {
@@ -6076,6 +6116,10 @@ button,
     margin: 0 0 8px;
     font-size: 14px;
     line-height: 14px;
+  }
+
+  .contacts__adress {
+    line-height: 20px;
   }
 
   .contacts__text {

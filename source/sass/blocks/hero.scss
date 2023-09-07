@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-content: flex-start;
-  padding-top: 89px;
+  padding-top: 109px;
   padding-bottom: 80px;
   margin-top: -19px;
 
@@ -25,14 +25,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 104px;
-    padding-bottom: 130px;
+    padding-top: 80px;
+    padding-bottom: 159px;
   }
 
   @include vp-767 {
     padding-top: 86px;
     padding-bottom: 139px;
     margin-top: -45px;
+    margin-bottom: -68px;
+  }
+
+  &--kamchatka {
+    padding-bottom: 82px;
   }
 }
 
@@ -53,6 +58,14 @@
     margin: 0;
     line-height: 21px;
     padding: 16px 34px 15px;
+  }
+
+  &--altai {
+    margin: 0 0 147px;
+  }
+
+  &--kamchatka {
+    margin: 0 0 147px;
   }
 }
 
@@ -102,7 +115,7 @@
   display: flex;
   justify-content: end;
   right: -8px;
-  bottom: 90px;
+  bottom: 98px;
   z-index: 1;
   gap: 0 7px;
 
@@ -199,7 +212,7 @@
     width: 100%;
 
     @include vp-1199 {
-      width: 410px;
+      width: 442px;
     }
   }
 }
@@ -242,7 +255,7 @@
   margin-top: 0;
 
   @include vp-1199 {
-    max-width: 65%;
+    max-width: 68%;
     margin: 0 auto 17px;
   }
 
