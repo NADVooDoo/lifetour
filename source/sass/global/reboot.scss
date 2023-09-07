@@ -120,6 +120,7 @@ input:matches([type="email"],
   [type="text"],
   [type="url"]) {
   appearance: none;
+  user-select: none;
 }
 
 button,
@@ -127,4 +128,5 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+  user-select: none;
 }
