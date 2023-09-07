@@ -65,3 +65,18 @@
   left: 6px;
   margin: auto;
 }
+
+.video__player {
+  display: none;
+}
+
+.video.is-active {
+  .video__button,
+  img {
+    display: none;
+  }
+
+  .video__player {
+    display: block;
+  }
+}

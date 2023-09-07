@@ -1,14 +1,32 @@
-const initVideo = () => {
-  if (document.querySelector('[data-video]')) {
-    const video = document.querySelector('[data-video]');
-    const button = document.querySelector('[data-control]');
-    const iframe = `
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${button.dataset.src}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  `;
+import {loadScript} from '../../utils/load-script.js';
 
-    button.addEventListener('click', () => {
-      video.innerHTML = iframe;
-    }, {once: true});
+const initVideo = () => {
+  const video = document.querySelector('[data-video]');
+  if (video) {
+    const player = video.querySelector('[data-player]');
+    const button = video.querySelector('[data-control]');
+
+    loadScript('https://youtube.com/player_api', () => {
+      window.onYouTubePlayerAPIReady = () => {
+        const youtubePlayer = new window.YT.Player(player, {
+          width: '100%',
+          height: '100%',
+          events: {
+            onStateChange(event) {
+              if (event.data === 0) {
+                video.classList.remove('is-active');
+              }
+            },
+          },
+          videoId: button.dataset.src,
+        });
+
+        button.addEventListener('click', () => {
+          video.classList.add('is-active');
+          youtubePlayer.playVideo();
+        });
+      };
+    });
   }
 };
 

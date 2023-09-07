@@ -18,26 +18,40 @@
   grid-template-columns: 1fr auto;
   align-content: flex-start;
   padding-top: 109px;
-  padding-bottom: 80px;
-  margin-top: -19px;
+  padding-bottom: 0;
+  margin-top: -25px;
 
   @include vp-1199 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
-    padding-bottom: 159px;
+    padding-bottom: 38px;
   }
 
   @include vp-767 {
     padding-top: 86px;
-    padding-bottom: 139px;
+    padding-bottom: 80px;
     margin-top: -45px;
-    margin-bottom: -68px;
+    margin-bottom: -63px;
   }
 
   &--kamchatka {
-    padding-bottom: 82px;
+    padding-bottom: -2px;
+    padding-top: 92px;
+
+    @include vp-1199 {
+      padding-bottom: 169px;
+    }
+
+    @include vp-767 {
+      margin-bottom: -51px;
+    }
+  }
+
+  &--altai {
+    padding-bottom: 81px;
+    padding-top: 92px;
   }
 }
 
@@ -62,10 +76,18 @@
 
   &--altai {
     margin: 0 0 147px;
+
+    @include vp-1199 {
+      margin: 0 0 70px;
+    }
   }
 
   &--kamchatka {
     margin: 0 0 147px;
+
+    @include vp-1199 {
+      margin: 0 0 35px;
+    }
   }
 }
 
@@ -110,23 +132,23 @@
   height: auto;
 }
 
-.hero__slider .hero__pagination {
-  position: absolute;
+.hero__pagination {
+  position: relative;
+  top: -107px;
+  height: 0;
   display: flex;
   justify-content: end;
-  right: -8px;
-  bottom: 98px;
-  z-index: 1;
+  z-index: 2;
   gap: 0 7px;
 
   @include vp-1199 {
     justify-content: center;
-    bottom: 90px;
     right: 1px;
+    top: -102px;
   }
 
   @include vp-767 {
-    bottom: 40px;
+    top: -50px;
     gap: 0 4px;
   }
 }
@@ -202,7 +224,7 @@
 }
 
 .hero__photo {
-  margin-top: 112px;
+  margin-top: 135px;
 
   @include vp-1199 {
     margin: 0 auto;
@@ -218,7 +240,7 @@
 }
 
 .hero__video {
-  margin: 211px 0 0;
+  margin: 221px 0 0;
 
   @include vp-1199 {
     margin: 0 auto;
@@ -226,7 +248,7 @@
 }
 
 .hero__audio {
-  margin: 211px 0 0;
+  margin: 235px 0 0;
 
   @include vp-1199 {
     margin: 0 auto;
@@ -240,11 +262,39 @@
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 2;
-  margin: 93px -100px 20px 0;
+  margin: 99px -100px 20px 0;
 
   @include vp-1199 {
-    margin: 113px 0 11px;
+    margin: 119px 0 11px;
     text-align: center;
+  }
+
+  @include vp-767 {
+    margin: 112px 0 11px;
+  }
+
+  &--kamchatka {
+    margin: 115px -188px 20px 0;
+
+    @include vp-1199 {
+      margin: 105px 0 11px 0;
+    }
+
+    @include vp-767 {
+      margin: 94px 0 11px;
+    }
+  }
+
+  &--altai {
+    margin: 116px -188px 20px 0;
+
+    @include vp-1199 {
+      margin: 105px 0 11px 0;
+    }
+
+    @include vp-767 {
+      margin: 92px 0 11px 0;
+    }
   }
 }
 
@@ -267,7 +317,7 @@
   }
 }
 
-.hero__slider .hero__pagination-button {
+.hero .hero__pagination-button {
   width: 10px;
   height: 10px;
   margin: 0;
@@ -294,4 +344,15 @@
   &[aria-current] {
     background-color: $color-default-white;
   }
+}
+
+.hero__slider .swiper-slide {
+  visibility: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.hero__slider .swiper-slide.swiper-slide-active {
+  visibility: visible;
+  opacity: 1;
 }

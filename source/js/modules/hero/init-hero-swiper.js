@@ -7,7 +7,9 @@ const getHeroSlider = () => {
     return null;
   }
 
-  return new Swiper(sliderElement, {
+  const listElement = sliderElement.querySelector('[data-hero-list]');
+
+  const slider = new Swiper(sliderElement, {
     loop: true,
     breakpoints: {
       768: {
@@ -24,6 +26,29 @@ const getHeroSlider = () => {
       },
     },
   });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab' || event.ctrlKey || event.altKey) {
+      return;
+    }
+    setTimeout(() => {
+      const slideElement = document.activeElement.closest('[data-hero-slide]');
+      if (!slideElement) {
+        return;
+      }
+
+      const {left} = slideElement.getBoundingClientRect();
+      if (left) {
+        const index = parseInt(slideElement.dataset.heroSlide, 10);
+        slider.slideTo(index);
+
+        const [, currentTransform] = getComputedStyle(listElement).transform.match(/([-\d]+?),\s0\)$/);
+        listElement.style.transform = `translate3d(${parseInt(currentTransform, 10) - left}px, 0, 0)`;
+      }
+    }, 33);
+  });
+
+  return slider;
 };
 
 export {getHeroSlider};
