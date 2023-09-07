@@ -24,7 +24,7 @@
   <div class="wrapper">
 
     <header class="header" data-header>
-      <div class="container">
+      <div class="container" data-header-container>
         <div class="header__wrapper">
           <button class="header__toggle" type="button" aria-label="Переключить меню" data-burger>
             <svg class="header__toggle-opened" width="26" height="26" aria-hidden="true" focusable="false">
@@ -40,7 +40,7 @@
               <use href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <nav class="header__nav nav">
+          <nav class="header__nav nav" data-navigation>
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link" href="#tours" data-link-menu>Туры</a>
@@ -1393,6 +1393,8 @@
         <a class="footer__politics" href="#!">Политика конфиденциальности</a>
       </div>
     </footer>
+
+    <div class="overlay" data-overlay></div>
 
   </div>
 

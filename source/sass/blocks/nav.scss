@@ -39,7 +39,7 @@
   @include vp-1199 {
     flex-direction: column;
     gap: 20px 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-wrap: nowrap;
     max-height: 50vh;
   }
