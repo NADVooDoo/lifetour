@@ -51,7 +51,7 @@ const optimizePng = () =>
               speed: 1,
               strip: true,
               dithering: 1,
-              quality: [0.8, 0.9],
+              quality: [0.7, 0.8],
             })]))
       .pipe(gulp.dest('build/img'));
 
