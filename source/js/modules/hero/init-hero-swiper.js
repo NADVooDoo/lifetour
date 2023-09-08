@@ -1,11 +1,16 @@
 import Swiper from '../../vendor/swiper';
 import {isMobileDevice} from '../../utils/is-mobile-device';
+import {initVideo} from '../../modules/hero/video';
+import {initAudio} from '../../modules/hero/audio';
 
 const getHeroSlider = () => {
   const sliderElement = document.querySelector('[data-hero-slider]');
   if (!sliderElement) {
     return null;
   }
+
+  const youtubePlayer = initVideo(sliderElement.querySelector('[data-video]'));
+  initAudio();
 
   const slider = new Swiper(sliderElement, {
     loop: true,
@@ -24,6 +29,11 @@ const getHeroSlider = () => {
       },
     },
     watchSlidesProgress: true,
+    on: {
+      slideChange() {
+        youtubePlayer.pause();
+      },
+    },
   });
 
   return slider;

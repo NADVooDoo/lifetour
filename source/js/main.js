@@ -3,8 +3,6 @@ import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/burger/burger';
 import {getHeroSlider} from './modules/hero/init-hero-swiper';
 import {getHeight} from './modules/hero/get-height';
-import {initVideo} from './modules/hero/video';
-import {initAudio} from './modules/hero/audio';
 import {getToursSlider} from './modules/init-tours-swiper';
 import {isMobileDevice} from './utils/is-mobile-device';
 import {getCoachingSlider} from './modules/init-coaching-swiper';
@@ -38,8 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initVideo();
-    initAudio();
     getToursSlider();
     getCoachingSlider();
     const form = new Form();
