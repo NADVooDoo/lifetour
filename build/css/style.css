@@ -5996,6 +5996,9 @@ button,
     max-width: 100%;
     padding: 20px;
     gap: 19px 0;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
 
   .reviews__item img {
@@ -6026,6 +6029,7 @@ button,
   .advantages__container {
     padding-top: 34px;
     padding-bottom: 33px;
+    margin-top: -75px;
   }
 
   .advantages__header::before {
