@@ -4,7 +4,6 @@ import {Burger} from './modules/burger/burger';
 import {getHeroSlider} from './modules/hero/init-hero-swiper';
 import {getHeight} from './modules/hero/get-height';
 import {getToursSlider} from './modules/init-tours-swiper';
-import {isMobileDevice} from './utils/is-mobile-device';
 import {getCoachingSlider} from './modules/init-coaching-swiper';
 import {getReviewsSlider} from './modules/init-reviews-swiper';
 import {getAdvantagesSlider} from './modules/init-advantages-swiper';
@@ -23,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  isMobileDevice();
   getHeight();
   const burger = new Burger();
   burger.init();

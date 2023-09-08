@@ -13,12 +13,7 @@ const getHeroSlider = () => {
   const audioPlayer = initAudio(sliderElement.querySelector('[data-audio]'));
 
   const slider = new Swiper(sliderElement, {
-    loop: true,
-    breakpoints: {
-      768: {
-        loop: false,
-      },
-    },
+    loop: isMobileDevice(),
     allowTouchMove: isMobileDevice(),
     speed: 300,
     pagination: {
@@ -30,10 +25,10 @@ const getHeroSlider = () => {
     },
     watchSlidesProgress: true,
     on: {
-      slideChange() {
+      slideChange(currentSlider) {
         youtubePlayer.pause();
 
-        const activeSlide = slider.slides[slider.activeIndex];
+        const activeSlide = currentSlider.slides[currentSlider.activeIndex];
         if (!activeSlide.querySelector('[data-audio]')) {
           audioPlayer.pause();
         }
