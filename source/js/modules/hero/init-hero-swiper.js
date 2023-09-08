@@ -10,7 +10,7 @@ const getHeroSlider = () => {
   }
 
   const youtubePlayer = initVideo(sliderElement.querySelector('[data-video]'));
-  initAudio();
+  const audioPlayer = initAudio(sliderElement.querySelector('[data-audio]'));
 
   const slider = new Swiper(sliderElement, {
     loop: true,
@@ -32,6 +32,11 @@ const getHeroSlider = () => {
     on: {
       slideChange() {
         youtubePlayer.pause();
+
+        const activeSlide = slider.slides[slider.activeIndex];
+        if (!activeSlide.querySelector('[data-audio]')) {
+          audioPlayer.pause();
+        }
       },
     },
   });
