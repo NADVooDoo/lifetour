@@ -5816,7 +5816,7 @@ button,
   }
 
   .coaching__instructors {
-    margin: 0 0 27px;
+    margin: 0 0 38px;
   }
 
   .coaching__activity-body {
@@ -6023,7 +6023,7 @@ button,
   .advantages__container {
     padding-top: 34px;
     padding-bottom: 33px;
-    margin-top: -75px;
+    margin-top: 1px;
   }
 
   .advantages__header::before {
