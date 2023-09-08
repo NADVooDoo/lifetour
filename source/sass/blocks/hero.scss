@@ -347,14 +347,3 @@
     background-color: $color-default-white;
   }
 }
-
-.hero__slider .swiper-slide {
-  visibility: hidden;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.hero__slider .swiper-slide.swiper-slide-active {
-  visibility: visible;
-  opacity: 1;
-}

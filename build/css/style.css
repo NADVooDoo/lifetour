@@ -1236,6 +1236,18 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.swiper[data-fullwidth] .swiper-slide {
+  visibility: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.swiper[data-fullwidth] .swiper-slide.swiper-slide-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* stylelint-disable */
 
 /* required styles */
@@ -3192,18 +3204,6 @@ button,
 
 .hero .hero__pagination-button[aria-current] {
   background-color: #ffffff;
-}
-
-.hero__slider .swiper-slide {
-  visibility: hidden;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.hero__slider .swiper-slide.swiper-slide-active {
-  visibility: visible;
-  opacity: 1;
 }
 
 .video {
