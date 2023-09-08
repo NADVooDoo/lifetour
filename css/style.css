@@ -4714,12 +4714,6 @@ button,
   }
 */
 
-@media (min-width: 768px) {
-  .swiper-slide-duplicate {
-    display: none;
-  }
-}
-
 @media (max-width: 1439px) {
   .hero__background img {
     -o-object-fit: cover;
@@ -5822,7 +5816,7 @@ button,
   }
 
   .coaching__instructors {
-    margin: 0 0 38px;
+    margin: 0 0 27px;
   }
 
   .coaching__activity-body {
