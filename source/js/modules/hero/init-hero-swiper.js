@@ -13,7 +13,6 @@ const getHeroSlider = () => {
   const audioPlayer = initAudio(sliderElement.querySelector('[data-audio]'));
 
   const slider = new Swiper(sliderElement, {
-    loop: isMobileDevice(),
     allowTouchMove: isMobileDevice(),
     speed: 300,
     pagination: {
